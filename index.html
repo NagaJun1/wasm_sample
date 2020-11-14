@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+  </head>
+  <body>
+    <h1>wasm_sample</h1>
+    <script type="module">
+      import init, * as wasm from './pkg/sample_wasm_rust.js';
+      async function run() {
+        await init();
+        var result = wasm.res();
+        alert(result);
+      }
+      run();
+    </script>
+  </body>
+</html>
