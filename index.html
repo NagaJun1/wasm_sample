@@ -5,12 +5,13 @@
   </head>
   <body>
     <h1>wasm_sample</h1>
+    <!--下記<p>のテキストを書き換えます-->
+    <p id ="id_1">htmlで設定したテキスト</p>
     <script type="module">
       import init, * as wasm from './pkg/sample_wasm_rust.js';
       async function run() {
         await init();
-        var result = wasm.res();
-        alert(result);
+        wasm.read_js_fnction();
       }
       run();
     </script>
